@@ -40,13 +40,14 @@
     <xacro:property name="kinematics_params" value="${kinematics_config['kinematics']}"/>
 
     <link name="${prefix}link_base">
-      <inertial>
+      <xacro:default_inertial />
+      <!--<inertial>
         <origin xyz="-0.00218 -0.00023 0.08604" rpy="0 0 0" />
         <mass value="1.95" />
         <inertia
           ixx="0.004805" ixy="-8.33E-06" ixz="0.00026847"
           iyy="0.0050349" iyz="7.23E-06" izz="0.0025418" />
-      </inertial>
+      </inertial>-->
       <xacro:common_link_visual 
         mesh_filename="xarm5/visual/link_base"  
         origin_xyz="0 0 0" 
@@ -58,9 +59,10 @@
         origin_rpy="0 0 0" />
     </link>
     <link name="${prefix}link1">
-      <xacro:common_link_inertial 
+      <xacro:default_inertial />
+      <!--<xacro:common_link_inertial
         link_inertial_params="${inertial_params['link1']}" 
-        origin_rpy="0 0 0"/>
+        origin_rpy="0 0 0"/>-->
       <xacro:common_link_visual 
         mesh_filename="xarm5/visual/link1"  
         origin_xyz="0 0 0" 
@@ -85,9 +87,10 @@
       <dynamics damping="10" friction="1" />
     </joint>
     <link name="${prefix}link2">
-      <xacro:common_link_inertial 
+      <xacro:default_inertial />
+      <!--<xacro:common_link_inertial
         link_inertial_params="${inertial_params['link2']}" 
-        origin_rpy="0 0 0"/>
+        origin_rpy="0 0 0"/>-->
       <xacro:common_link_visual 
         mesh_filename="xarm5/visual/link2"  
         origin_xyz="0 0 0" 
@@ -112,9 +115,10 @@
       <dynamics damping="10" friction="1" />
     </joint>
     <link name="${prefix}link3">
-      <xacro:common_link_inertial 
+      <xacro:default_inertial />
+      <!--<xacro:common_link_inertial
         link_inertial_params="${inertial_params['link3']}" 
-        origin_rpy="0 0 0"/>
+        origin_rpy="0 0 0"/>-->
       <xacro:common_link_visual 
         mesh_filename="xarm5/visual/link3"  
         origin_xyz="0 0 0" 
@@ -139,9 +143,10 @@
       <dynamics damping="5" friction="1" />
     </joint>
     <link name="${prefix}link4">
-      <xacro:common_link_inertial 
+      <xacro:default_inertial />
+      <!--<xacro:common_link_inertial
         link_inertial_params="${inertial_params['link4']}" 
-        origin_rpy="0 0 0"/>
+        origin_rpy="0 0 0"/>-->
       <xacro:common_link_visual 
         mesh_filename="xarm5/visual/link4"  
         origin_xyz="0 0 0" 
@@ -166,9 +171,10 @@
       <dynamics damping="3" friction="1" />
     </joint>
     <link name="${prefix}link5">
-      <xacro:common_link_inertial 
+      <xacro:default_inertial />
+      <!--<xacro:common_link_inertial
         link_inertial_params="${inertial_params['link5']}" 
-        origin_rpy="0 0 0"/>
+        origin_rpy="0 0 0"/>-->
       <xacro:common_link_visual 
         mesh_filename="${end_tool_visual_filename}"  
         origin_xyz="0 0 0" 
